@@ -88,13 +88,13 @@ namespace Shape
         }
         /// <summary>
         /// Прямоугольный ли треугольник?
-        /// <para>Немного грешим против истины, т.к. возможны ошибки округления double</para>
+        /// <para>Немного грешим против истины, т.к. возможны ошибки округления double.</para>
         /// </summary>
         /// <returns></returns>
         public bool IsRectangular()
         {
             var sides = SidesLenght();
-            return Math.Round(sides.max * sides.max, 7) == Math.Round(sides.min * sides.min + sides.mid * sides.mid, 7);
+            return Square() == 0.5 * sides.mid * sides.min;
         }
         /// <summary>
         /// Длины сторон по ранжиру

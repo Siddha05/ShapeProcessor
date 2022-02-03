@@ -24,13 +24,25 @@ namespace Tests
         [TestMethod]
         public void TestIsRectangular()
         {
-            var triangle = new Triangle(new Point(), new Point(0, 4), new Point(3, 0));
+            var triangle = new Triangle(new Point(), new Point(0, 161), new Point(240, 0));
             Assert.IsTrue(triangle.IsRectangular());
         }
         [TestMethod]
         public void TestIsNotRectangular()
         {
-            var triangle = new Triangle(new Point(1, 1), new Point(0, 4), new Point(3, 0));
+            var triangle = new Triangle(new Point(), new Point(0, 161.1), new Point(240, 0));
+            Assert.IsFalse(triangle.IsRectangular());
+        }
+        [TestMethod]
+        public void TestIsNotRectangular2()
+        {
+            var triangle = new Triangle(new Point(), new Point(0, 161.1), new Point(240, 0));
+            Assert.IsFalse(triangle.IsRectangular());
+        }
+        [TestMethod]
+        public void TestIsNotRectangular3()
+        {
+            var triangle = new Triangle(new Point(), new Point(0, 161.01), new Point(240, 0));
             Assert.IsFalse(triangle.IsRectangular());
         }
         [TestMethod]
