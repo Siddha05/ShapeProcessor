@@ -94,7 +94,7 @@ namespace Shape
         public bool IsRectangular()
         {
             var sides = SidesLenght();
-            return Math.Round(sides.max * sides.max, 14) == Math.Round(sides.min * sides.min + sides.mid * sides.mid, 14);
+            return Math.Round(sides.max * sides.max, 7) == Math.Round(sides.min * sides.min + sides.mid * sides.mid, 7);
         }
         /// <summary>
         /// Длины сторон по ранжиру
